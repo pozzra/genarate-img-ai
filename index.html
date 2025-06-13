@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Creative Studio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Custom scrollbar for better aesthetics if needed, but sticking to Tailwind mostly */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #888;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #555;
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.1.0/",
+    "react/": "https://esm.sh/react@^19.1.0/",
+    "react": "https://esm.sh/react@^19.1.0",
+    "@google/genai": "https://esm.sh/@google/genai@0.12.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-gradient-to-br from-slate-900 to-slate-800 text-slate-100 min-h-screen flex flex-col">
+  <div id="root" class="flex-grow flex flex-col"></div>
+  <script>
+    // Initialize API_KEY for demonstration purposes if not set by environment.
+    // In a real deployment, process.env.API_KEY would be set by the environment.
+    // THIS IS A SIMPLIFICATION FOR THIS ENVIRONMENT and would typically not be in client-side code.
+    // The problem statement implies process.env.API_KEY is available.
+    if (!window.process) {
+      window.process = { env: {} };
+    }
+    if (!window.process.env.API_KEY) {
+      // console.warn("API_KEY not set. Please set process.env.API_KEY for Gemini API to work.");
+      // Provide a placeholder key if you want the UI to load, but API calls will fail.
+      // For actual use, this key must be a valid Google AI Studio API key.
+      // window.process.env.API_KEY = "YOUR_API_KEY_HERE"; // DO NOT COMMIT A REAL KEY
+    }
+  </script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

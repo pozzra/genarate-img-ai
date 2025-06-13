@@ -1,0 +1,5 @@
+{
+  "name": "AI Creative Studio",
+  "description": "An application to generate images using AI. Video generation feature is a placeholder for future development.",
+  "requestFramePermissions": []
+}
